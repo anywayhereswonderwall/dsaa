@@ -5,7 +5,7 @@ Most fundamental data structures and algorithms related to them. Implemented in 
 Project insprired by https://github.com/jeffzh4ng/iruka.
 ## Data structures
   - [ ] Lists
-    - [ ] Linked list
+    - [X] Linked list
     - [ ] Stack
     - [ ] Queue
     - [ ] Dequeue
