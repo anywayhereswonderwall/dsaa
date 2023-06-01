@@ -60,6 +60,8 @@ class LinkedList(Generic[T]):
     # Add element to the end of the list
     def add(self, key: T) -> None:
         last = self.head
+        # Adding new node to the end of the list
+        # in O(n) time
 
         # Getting the last element
         while last.next:
@@ -67,6 +69,20 @@ class LinkedList(Generic[T]):
 
         # Adding the new node after the tail
         last.next = Node(key)
+
+        # Increment size
+        self.n += 1
+
+    def addleft(self, key: T) -> None:
+        # Adding element to the beginning of the list
+        # in O(1) time
+
+        # Creating new node
+        new_node = Node(key)
+
+        # Shifting the pointer of head (dummy node) to the new node
+        new_node.next = self.head.next
+        self.head.next = new_node
 
         # Increment size
         self.n += 1

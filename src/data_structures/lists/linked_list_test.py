@@ -58,7 +58,15 @@ class LinkedListTest(unittest.TestCase):
 
         self.linked_list.pop()
         self.assertEqual(self.linked_list.size(), 0)
+    def test_add_left(self):
+        self.linked_list.addleft(1)
+        self.linked_list.addleft(2)
+        self.linked_list.addleft(3)
 
+        self.assertEqual(self.linked_list.pop(), 1)
+        self.assertEqual(self.linked_list.pop(), 2)
+        self.assertEqual(self.linked_list.pop(), 3)
+        self.assertIsNone(self.linked_list.pop())
 
 if __name__ == '__main__':
     unittest.main()
